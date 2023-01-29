@@ -1,0 +1,15 @@
+# Исключения: 
+# VS Solution (расширение .sln)
+# VS Project (расширение .vcproj)
+# файлы исходного кода (.cpp, .h)
+# файлы с данными (.txt)
+
+
+/cppm-hw-??-??/*
+!/cppm-hw-??-??/cppm-hw-??-??/
+!/cppm-hw-??-??/*.sln
+
+/cppm-hw-??-??/cppm-hw-??-??/*
+!/**/*.cpp
+!/**/*.txt
+!/**/*.vcxproj
