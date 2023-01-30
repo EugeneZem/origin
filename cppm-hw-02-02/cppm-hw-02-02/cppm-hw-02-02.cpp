@@ -8,11 +8,11 @@ struct bankAccount
     float total;
 };
 
-void totalChange(bankAccount item)
+void totalChange(bankAccount *item)
 {
     std::cout << "Введите новый баланс: ";
-    std::cin >> item.total;
-    std::cout << "Ваш счет: " << item.clientName << ", " << item.number << ", " << item.total;
+    std::cin >> (*item).total;
+    std::cout << "Ваш счет: " << (*item).clientName << ", " << (*item).number << ", " << (*item).total;
 }
 
 int main()
@@ -21,13 +21,16 @@ int main()
    system("chcp 1251");
 
     bankAccount newAccount;
+    bankAccount *p_newAccount = &newAccount;    // объявление указателя
 
     std::cout << "Введите номер счета: ";
-    std::cin >> newAccount.number;
+    std::cin >> (*p_newAccount).number;         // обращение через указатель
     std::cout << "Введите имя владельца: ";
-    std::cin >> newAccount.clientName;
+    std::cin >> p_newAccount->clientName;       // второй вариант обращения через указатель
     std::cout << "Введите баланс: ";
-    std::cin >> newAccount.total;
+    std::cin >> newAccount.total;               
 
-    totalChange(newAccount);
+
+
+    totalChange(p_newAccount);
 }

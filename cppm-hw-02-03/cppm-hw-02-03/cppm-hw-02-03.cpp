@@ -11,7 +11,7 @@ struct adress
 
 };
 
-void print(adress item)
+void print(const adress& item)
 {
     std::cout << "Город: " << item.city << std::endl;
     std::cout << "Улица: " << item.street << std::endl;
