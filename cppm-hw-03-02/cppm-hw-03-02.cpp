@@ -57,6 +57,9 @@ int main()
             std::cout << p_Counter->getItem() << std::endl;
         }
     } while (operation != 'х');
+
+    delete p_Counter;
+
     std::cout << "До свидания";
 
 }
