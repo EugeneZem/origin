@@ -85,7 +85,7 @@ int main()
 	if (!base.readF("in.txt"))
 	{
 		std::cout << "Исходный файл не прочитан";
-		return ;
+		return 1;
 	} 
 	else
 	{
