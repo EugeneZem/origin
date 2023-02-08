@@ -17,6 +17,7 @@ public:
         return sideCounter;
     }
 
+    virtual void print_info(){}
 };
 
 class Triangle : public Figure
@@ -38,34 +39,10 @@ public:
         this->C = C;
     }
 
-    double get_a() 
+    void print_info() 
     {
-        return a;
-    }
-
-    double get_b()
-    {
-        return b;
-    }
-    
-    double get_c()
-    {
-        return c;
-    }
-
-    double get_A()
-    {
-        return A;
-    }
-    
-    double get_B()
-    {
-        return B;
-    }
-
-    double get_C()
-    {
-        return C;
+        std::cout << "Строны: a=" << a << " b=" << b << " c=" << c << std::endl;
+        std::cout << "Углы: A=" << A << " B=" << B << " C=" << C << std::endl;
     }
 };
 
@@ -137,44 +114,10 @@ public:
         this->D = D;
     }
 
-    double get_a()
+    void print_info()
     {
-        return a;
-    }
-
-    double get_b()
-    {
-        return b;
-    }
-
-    double get_c()
-    {
-        return c;
-    }
-
-    double get_d()
-    {
-        return d;
-    }
-
-    double get_A()
-    {
-        return A;
-    }
-
-    double get_B()
-    {
-        return B;
-    }
-
-    double get_C()
-    {
-        return C;
-    }
-
-    double get_D()
-    {
-        return D;
+        std::cout << "Строны: a=" << a << " b=" << b << " c=" << c << " d=" << d << std::endl;
+        std::cout << "Углы: A=" << A << " B=" << B << " C=" << C << " D=" << D << std::endl;
     }
 };
 
@@ -246,18 +189,6 @@ public:
     }
 };
 
-void print_info (Triangle* ptrfigure)
-{
-    std::cout << "Строны: a=" << ptrfigure->get_a() << " b=" << ptrfigure->get_b() << " c=" << ptrfigure->get_c() << std::endl;
-    std::cout << "Углы: A=" << ptrfigure->get_A() << " B=" << ptrfigure->get_B() << " C=" << ptrfigure->get_C() << std::endl;
-}
-
-void print_info(Quadrangle* ptrfigure)
-{
-    std::cout << "Строны: a=" << ptrfigure->get_a() << " b=" << ptrfigure->get_b() << " c=" << ptrfigure->get_c() << " d=" << ptrfigure->get_d() << std::endl;
-    std::cout << "Углы: A=" << ptrfigure->get_A() << " B=" << ptrfigure->get_B() << " C=" << ptrfigure->get_C() << " D=" << ptrfigure->get_D() << std::endl;
-}
-
 int main()
 {
     setlocale(LC_ALL, "ru-RU");
@@ -265,37 +196,46 @@ int main()
     
     std::cout << "Треугольник: " << std::endl;
     Triangle triangle(10, 20, 30, 50, 60, 70);
-    print_info(&triangle);
-        
+    Figure* ptrTriangle = &triangle;
+    ptrTriangle->print_info();
+
     std::cout << std::endl << "Прямоугольный треугольник: " << std::endl;
     TriangleRight triangleRight(10, 20, 30, 50, 60);
-    print_info(&triangleRight);
+    Figure* ptrTriangleRight = &triangleRight;
+    ptrTriangleRight->print_info();
 
     std::cout << std::endl << "Равнобедренный треугольник: " << std::endl;
     TriangleIsosceles triangleIsosceles(10, 20, 50, 60);
-    print_info(&triangleIsosceles);
+    Figure* ptrTriangleIsosceles = &triangleIsosceles;
+    ptrTriangleIsosceles->print_info();
 
     std::cout << std::endl << "Равносторонний треугольник: " << std::endl;
     TriangleEquilateral triangleEquilateral(10);
-    print_info(&triangleEquilateral);
+    Figure* ptrTriangleEquilateral = &triangleEquilateral;
+    ptrTriangleEquilateral->print_info();
 
     std::cout << std::endl << "Четырехугольник: " << std::endl;
     Quadrangle quadrangle(10, 30, 30, 40, 50, 60, 70, 80);
-    print_info(&quadrangle);
+    Figure* ptrQuadrangle = &quadrangle;
+    ptrQuadrangle->print_info();
 
     std::cout << std::endl << "Прямоугольник: " << std::endl;
     Rectangle rectangle(10, 20);
-    print_info(&rectangle);
+    Figure* ptrRectangle = &rectangle;
+    ptrRectangle->print_info();
 
     std::cout << std::endl << "Квадрат: " << std::endl;
     Square square(20);
-    print_info(&square);
+    Figure* ptrSquare = &square;
+    ptrSquare->print_info();
 
     std::cout << std::endl << "Параллелограмм: " << std::endl;
     Parallelogram parallelogram(20, 30, 30, 40);
-    print_info(&parallelogram);
+    Figure* ptrParallelogram = &parallelogram;
+    ptrParallelogram->print_info();
 
     std::cout << std::endl << "Ромб: " << std::endl;
     Rhomb rhomb(30, 30, 40);
-    print_info(&rhomb);
+    Figure* ptrRhomb = &rhomb;
+    ptrRhomb->print_info();
 }

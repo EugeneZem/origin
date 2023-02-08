@@ -5,16 +5,23 @@ class Figure
 {
 protected:
     int sideCounter;
+    std::string name;
 
 public:
     Figure()
     {
         sideCounter = 0;
+        name = "Фигура";
     }
 
     int getSide()
     {
         return sideCounter;
+    }
+
+    std::string getName() 
+    {
+        return name;
     }
 
 };
@@ -25,6 +32,7 @@ public:
     Triangle()
     {
         sideCounter = 3;
+        name = "Треугольник";
     }
 };
 
@@ -34,6 +42,7 @@ public:
     Rectangle()
     {
         sideCounter = 4;
+        name = "Четырехугольник";
     }
 };
 
@@ -44,9 +53,9 @@ int main()
         
     std::cout << "Количество сторон:" << std::endl;
     Figure figure;
-    std::cout << "Фигура: " << figure.getSide() << std::endl;
+    std::cout << figure.getName() << ": " << figure.getSide() << std::endl;
     Triangle triangle;
-    std::cout << "Треугольник: " << triangle.getSide() << std::endl;
+    std::cout << triangle.getName() << ": " << triangle.getSide() << std::endl;
     Rectangle rectangle;
-    std::cout << "Четырехугольник: " << rectangle.getSide() << std::endl;
+    std::cout << rectangle.getName() << ": " << rectangle.getSide() << std::endl;
  }
