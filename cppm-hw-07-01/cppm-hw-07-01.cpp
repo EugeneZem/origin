@@ -9,7 +9,9 @@ int main()
 {
 	setlocale(LC_ALL, "ru-RU");
 	system("chcp 1251");
-#if MODE == 0
+#ifndef MODE
+	std::cout << "MODE не определенa";
+#elif MODE == 0
 	std::cout << "Работаю в тренировочном режиме";
 #elif MODE == 1
 	int var1, var2;
