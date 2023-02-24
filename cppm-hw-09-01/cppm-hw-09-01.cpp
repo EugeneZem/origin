@@ -17,8 +17,8 @@ public:
 
 	bool operator == (Fraction over) { return realNumb() == over.realNumb(); }
 	bool operator != (Fraction over) { return !(*this == over); }
-	bool operator > (Fraction over) { return realNumb() < over.realNumb(); }
-	bool operator < (Fraction over) { return realNumb() > over.realNumb(); }
+	bool operator > (Fraction over) { return realNumb() > over.realNumb(); }
+	bool operator < (Fraction over) { return realNumb() < over.realNumb(); }
 	bool operator <= (Fraction over) { return !(*this > over); }
 	bool operator >= (Fraction over) { return !(*this < over); }
 };

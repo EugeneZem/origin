@@ -53,7 +53,7 @@ public:
 		int commonDivisor = fract.commonDivisor();
 		fract.numerator_ = fract.numerator_ / commonDivisor;
 		fract.denominator_ = fract.denominator_ / commonDivisor;
-		
+
 		ostream << fract.numerator_ << "/" << fract.denominator_;
 		return ostream;
 	}
@@ -145,12 +145,12 @@ int main()
 	std::cout << f1 << " * " << f2 << " = " << f5 << std::endl;
 	Fraction f6 = f1 / f2;
 	std::cout << f1 << " / " << f2 << " = " << f6 << std::endl;
-	
+
 	std::cout << "++" << f1 << " * " << f2 << " = ";
 	Fraction f7 = ++f1 * f2;
 	std::cout << f7 << std::endl;
 	std::cout << "Значение дроби 1 = " << f1 << std::endl;
-	
+
 	std::cout << f1 << "-- * " << f2 << " = ";
 	Fraction f8 = f1-- * f2;
 	std::cout << f8 << std::endl;
