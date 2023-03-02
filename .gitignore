@@ -18,3 +18,10 @@
 !/**/*.cpp
 !/**/*.txt
 !/**/*.vcxproj
+
+!/cppm-hw-11-02/App/*.cpp
+!/cppm-hw-11-02/App/*.vcxproj
+!/cppm-hw-11-02/DynamicLib/*.cpp
+!/cppm-hw-11-02/DynamicLib/*.h
+!/cppm-hw-11-02/DynamicLib/*.sln
+!/cppm-hw-11-02/DynamicLib/*.vcxproj

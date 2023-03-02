@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.22.0)
+project(myProject)
+add_library(leave SHARED  leaver.h leaver.cpp)
+add_executable(cppm-hw-11-03 App.cpp)
+target_link_libraries(cppm-hw-11-03 leave)
