@@ -1,7 +1,7 @@
 # Исключения: 
 # VS Solution (расширение .sln)
 # VS Project (расширение .vcproj)
-# файлы исходного кода (.cpp, .h)
+# файлы исходного кода и заголовочные файлы (.cpp, .h)
 # файлы с данными (.txt)
 
 .gitignore
@@ -19,8 +19,13 @@
 !/**/*.txt
 !/**/*.vcxproj
 
+!/cppm-hw-11-02/App/
+/cppm-hw-11-02/App/*
 !/cppm-hw-11-02/App/*.cpp
 !/cppm-hw-11-02/App/*.vcxproj
+
+!/cppm-hw-11-02/DynamicLib/
+/cppm-hw-11-02/DynamicLib/*
 !/cppm-hw-11-02/DynamicLib/*.cpp
 !/cppm-hw-11-02/DynamicLib/*.h
 !/cppm-hw-11-02/DynamicLib/*.sln
